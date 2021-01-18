@@ -97,18 +97,28 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 			button8 = new JButton(icon);
 			//button8.setBounds(0, 10, 200, 10);
 			button8.setBackground(Color.lightGray);
-
+			JButton finalButton = button8;
 			if(image == "exit") {
 				button8.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						f.setVisible(false);
 					}
 				});
-				JButton finalButton = button8;
 				button8.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseEntered(MouseEvent me) {
 						finalButton.setBackground(Color.red);
+					}
+					@Override
+					public void mouseExited(MouseEvent me) {
+						finalButton.setBackground(Color.lightGray);
+					}
+				});
+			} else {
+				button8.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseEntered(MouseEvent me) {
+						finalButton.setBackground(Color.cyan);
 					}
 					@Override
 					public void mouseExited(MouseEvent me) {
