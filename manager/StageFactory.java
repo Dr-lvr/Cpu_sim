@@ -52,7 +52,7 @@ public class StageFactory extends Panel {
 		//automatizzabile
 		spritesStage.put(SpritesEnum.STATUS_WORD, new SpriteRect(stage, 218, 250, 100, 20));
 		spritesStage.put(SpritesEnum.BOX_EDITOR, editBox);
-		spritesStage.put(SpritesEnum.ABUS, new SpriteRect(stage, 820, 30, 5, 259));
+		spritesStage.put(SpritesEnum.ABUS, new SpriteRect(stage, 358, 30, 5, 259));
 		//spritesStage.put(SpritesEnum.RAM_CONTAINER, new SpriteRect(stage, 0, 3, ncs.getWidth() - 390, 292));
 		spritesStage.put(SpritesEnum.INSTRUCTION_REGISTER, new SpriteIR(stage, 35, 30, 140, 20));
 		spritesStage.put(SpritesEnum.MULTIPLEXER, new SpriteMUX(stage, 185, 100, 60, 20));
@@ -64,7 +64,7 @@ public class StageFactory extends Panel {
 		spritesStage.put(SpritesEnum.DECODER,
 				new SpriteBox(stage, "DEC", 35, 100, 70, 20, "Decoder", "Decoder"));
 		spritesStage.put(SpritesEnum.INSTRUCTION_IN_RAM, new SpriteIRAM(stage,
-				(int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 460, 30, scrollBar));		
+				410, 30, scrollBar));
 		spritesStage.put(SpritesEnum.EDITOR,
 				new SpriteBox(stage, "EDIT", 10, 410, 470, 250, 0));
 		spritesStage.put(SpritesEnum.SYSTEM_SERVICES,
@@ -200,8 +200,8 @@ public class StageFactory extends Panel {
 		a=38;
 		for(int i = 0; i<16; ++i) {
 			
-			makeNode(stage, Integer.toString(a), 830, a);
-			makeNode(stage, Integer.toString(a) + "1", 900, a);
+			makeNode(stage, Integer.toString(a), 360, a);
+			makeNode(stage, Integer.toString(a) + "1", 410, a);
 			makeWire(stage, Integer.toString(a), Integer.toString(a) + "1", "controlIn", ncs);
 			
 			a+=16;
@@ -218,8 +218,8 @@ public class StageFactory extends Panel {
 		
 		makeNode(stage, "SYS0", 575, 450);
 		makeNode(stage, "SYS4", 575, 330);
-		makeNode(stage, "SYS5", 1100, 330);
-		makeNode(stage, "VRAM2",1100, 300);
+		makeNode(stage, "SYS5", 636, 330);
+		makeNode(stage, "VRAM2",636, 290);
 		
 		makeWire(stage, "EDI", "SYS", "dataOut", ncs);
 		makeWire(stage, "SYS", "OTH", "dataOut", ncs);

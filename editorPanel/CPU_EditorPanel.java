@@ -54,8 +54,6 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 		}
 		setLayout (new BoxLayout (this, BoxLayout.Y_AXIS)); 
 	}
-	
-
 	// singleton pattern at lazy time
 	public static CPU_EditorPanel getEditorInstanceP() throws IOException {
 		if (theController == null) {
@@ -85,7 +83,7 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 			b = new JButton("-");
 			d.add(b);
 		}
-		d.setBounds(810, 38, 433, 335);
+		d.setBounds(370, 38, 360, 335);
 		d.setVisible(true);
 	}
 }

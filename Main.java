@@ -33,7 +33,7 @@ public class Main {
 	            	frame.setVisible(false);
 	            	try {
 	    				New_Sim newSim = new New_Sim();
-	    				newSim.setSize((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() + 10,
+	    				newSim.setSize((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 500,
 	    						(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight());
 	    				newSim.setTitle("New_Tuned_Simulator");
 	    				newSim.setVisible(true);
@@ -46,7 +46,7 @@ public class Main {
 	        panel.add(label);  
 	        panel.add(button);  
 	        frame.add(panel);  
-	        frame.setSize(200, 300);  
+	        frame.setSize(200, 300);
 	        frame.setLocationRelativeTo(null);  
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
 	        frame.setVisible(true);

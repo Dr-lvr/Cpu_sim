@@ -54,7 +54,7 @@ public class SpriteProvider extends Panel {
 		bgColor = Color.lightGray;
 
 		this.editorPanel = editorPanel;
-		editorPanel.setBounds(1230, 0, 200, 1000);
+		editorPanel.setBounds(705, 0, 200, 1000);
 		editorPanel.setBackground(Color.gray);
 		editorPanel.setVisible(true);
 		this.add(editorPanel);
@@ -70,7 +70,7 @@ public class SpriteProvider extends Panel {
 		setLayout(null);
 		setBackground(bgColor);
 		// setBounds(0, 0, 725, 300);
-		setBounds(0, 0, (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth(),
+		setBounds(0, 0, (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth()-530,
 				(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 100);
 		scrollBar = new Scrollbar(Scrollbar.VERTICAL);
 		frame.add(scrollBar);
