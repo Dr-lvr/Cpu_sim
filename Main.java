@@ -23,9 +23,9 @@ public class Main {
 			JFrame frame = new JFrame("CPU_Sim_Menu");
 	        JPanel panel = new JPanel();  
 	        panel.setLayout(new FlowLayout());  
-	        JLabel label = new JLabel("Menu");
+	        JLabel label = new JLabel("---->>>");
 	        JButton button = new JButton();  
-	        button.setText("Button");
+	        button.setText("GOTO_CPU_Sim_Menu");
 	        button.addActionListener ( new ActionListener()
 	        {  
 	            public void actionPerformed( ActionEvent e )  
@@ -46,7 +46,8 @@ public class Main {
 	        panel.add(label);  
 	        panel.add(button);  
 	        frame.add(panel);  
-	        frame.setSize(200, 300);
+	        frame.setSize((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 500,
+					(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight());
 	        frame.setLocationRelativeTo(null);  
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
 	        frame.setVisible(true);
