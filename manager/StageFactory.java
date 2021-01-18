@@ -51,6 +51,7 @@ public class StageFactory extends Panel {
 		
 		//automatizzabile
 		spritesStage.put(SpritesEnum.STATUS_WORD, new SpriteRect(stage, 218, 250, 100, 20));
+
 		spritesStage.put(SpritesEnum.BOX_EDITOR, editBox);
 		spritesStage.put(SpritesEnum.ABUS, new SpriteRect(stage, 358, 30, 5, 259));
 		//spritesStage.put(SpritesEnum.RAM_CONTAINER, new SpriteRect(stage, 0, 3, ncs.getWidth() - 390, 292));
@@ -85,6 +86,10 @@ public class StageFactory extends Panel {
 		final int labelOffsetY = 25;
 		for (Map.Entry<SpritesEnum, SpriteType> entry : spritesStage.entrySet()) {
 			switch (entry.getKey()) {
+				case STATUS_WORD:
+					makeLabel(stage, "STATUS_WORD", 218, 250, 100, 20, 2);
+					entry.getValue().addStage(2);
+					break;
 			case BOX_EDITOR:
 				break;
 			case ABUS:
@@ -160,7 +165,6 @@ public class StageFactory extends Panel {
 				entry.getValue().addStage(2);
 				break;
 			default:
-				entry.getValue().addStage(2);
 				break;
 			}
 		}
