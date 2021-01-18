@@ -6,7 +6,7 @@ import java.util.Vector;
 
 //PHYSICAL WIRE
 
-import pippin.New_Sim;
+import pippin.a_newSimLauncher.New_Sim;
 import pippin.components.utility.ColorTools;
 import pippin.exceptions.AbortedException;
 import pippin.genericTypes.Sprite;

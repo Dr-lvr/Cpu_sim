@@ -1,4 +1,6 @@
-    package pippin;
+    package pippin.a_welcomePanel;
+
+    import pippin.a_newSimLauncher.New_Sim;
 
     import javax.swing.*;
     import java.awt.*;
@@ -25,7 +27,6 @@
             setLayout(new FlowLayout());
 
             JFrame frame = this;
-
             button.addActionListener ( new ActionListener()
             {
                 public void actionPerformed( ActionEvent e )
@@ -37,7 +38,6 @@
                         c.printStackTrace();
                     }
                     try {
-
                         New_Sim newSim = new New_Sim();
                         newSim.setSize((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 500,
                                 (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight());

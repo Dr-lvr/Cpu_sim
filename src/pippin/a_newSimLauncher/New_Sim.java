@@ -1,4 +1,4 @@
-package pippin;
+package pippin.a_newSimLauncher;
 
 import javax.swing.*;
 

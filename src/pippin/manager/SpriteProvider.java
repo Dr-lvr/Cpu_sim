@@ -8,7 +8,7 @@ import java.awt.Scrollbar;
 import java.awt.Toolkit;
 import java.util.Map;
 
-import pippin.New_Sim;
+import pippin.a_newSimLauncher.New_Sim;
 import pippin.components.cpuSprites.SpriteEditBox;
 import pippin.components.cpuSprites.Sprite_Node;
 import pippin.editorPanel.CPU_EditorPanel;
