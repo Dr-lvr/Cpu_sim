@@ -9,13 +9,9 @@
 	//import java.awt.Button;
 	import java.util.Vector;
 
-	import javax.swing.BoxLayout;
-	import javax.swing.Icon;
-	import javax.swing.ImageIcon;
-	import javax.swing.JButton;
+	import javax.swing.*;
 	//import javax.swing.ImageIcon;
 	//import javax.swing.JButton;
-	import javax.swing.JPanel;
 
 	import pippin.system.mediators.Controller;
 
@@ -54,15 +50,27 @@
 				if(image == "CPU_icona") {
 					button8.addActionListener(this);
 				}
+				JFrame ff= new JFrame();
+				ff.setResizable(true);
+				JPanel c = new JPanel();
+				JLabel text = new JLabel(image);
+				c.add(text);
+				c.setLayout( new FlowLayout() );
+				c.setSize(300,300);
+				c.setVisible(true);
+				ff.add(c);
+				ff.setBounds(400, 230, 200, 200);
 				JButton finalButton = button8;
 				button8.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseEntered(MouseEvent me) {
+						ff.setVisible(true);
 						finalButton.setBackground(Color.orange);
 					}
 
 					@Override
 					public void mouseExited(MouseEvent me) {
+						ff.setVisible(false);
 						finalButton.setBackground(Color.lightGray);
 					}
 				});

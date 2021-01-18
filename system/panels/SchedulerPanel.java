@@ -45,7 +45,7 @@ public class SchedulerPanel extends JPanel implements ActionListener {
 		JFrame ff= new JFrame();
 		ff.setResizable(true);
 		JPanel c = new JPanel();
-		JLabel text = new JLabel("Scheduler panel for process and scheduling");
+		JLabel text = new JLabel("Scheduler panel for scheduling");
 		c.add(text);
 		c.setLayout( new FlowLayout() );
 		c.setSize(300,300);
