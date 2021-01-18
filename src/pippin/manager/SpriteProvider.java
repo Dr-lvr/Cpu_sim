@@ -80,7 +80,7 @@ public class SpriteProvider extends Panel {
 		add(scrollBar);
 		scrollBar.setBounds(getSize().width - 27, 30, barWidth, 258);
 		this.stage = new Stage(bgColor, new Dimension(725, 400), mode); // 665 400
-		// this.stage.reshape(0, 0, 725, 400); // 565 295
+		// this.pippin.stage.reshape(0, 0, 725, 400); // 565 295
 		this.stage.reshape(0, 0, (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth(),
 				(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 100); // 565 295
 		

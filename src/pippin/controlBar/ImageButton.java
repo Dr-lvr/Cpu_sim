@@ -224,7 +224,7 @@ public class ImageButton extends Canvas {
 	}
 
 	protected String paramString() {
-		return super.paramString() + ",state=" + state + ",labelOn=" + labelOn + ",labelOff=" + labelOff + ",imageOn="
+		return super.paramString() + ",pippin.state=" + state + ",labelOn=" + labelOn + ",labelOff=" + labelOff + ",imageOn="
 				+ imageOn + ",imageOff=" + imageOff + ",imageWidth=" + imageWidth + ",imageHeight=" + imageHeight
 				+ ",group=" + group;
 	}

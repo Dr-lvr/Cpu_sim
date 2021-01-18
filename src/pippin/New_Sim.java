@@ -1,4 +1,5 @@
 package pippin;
+
 import javax.swing.*;
 
 import pippin.controlBar.ControlBar;

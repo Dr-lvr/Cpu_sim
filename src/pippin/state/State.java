@@ -14,7 +14,7 @@ public class State {
     String stateFileName;
     File stateFile;
     static boolean error = true;
-    static final String HEADER = "This is a legal state file";
+    static final String HEADER = "This is a legal pippin.state file";
     private static Hashtable<String, Boolean> privTable = new Hashtable<>();
 
     public State(Frame applet, String defaultName) {
@@ -90,13 +90,13 @@ public class State {
                 stateFile = data;
         } catch(FileNotFoundException _ex) {
             if(errorDialogs)
-                ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: file not found");
+                ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: file not found");
             else
-                System.err.println("Error loading state: file not found");
+                System.err.println("Error loading pippin.state: file not found");
         } catch(IOException e) {
             if(errorDialogs)
-                ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: couldn't read file");
-            System.err.println("Error loading state: exception " + e);
+                ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: couldn't read file");
+            System.err.println("Error loading pippin.state: exception " + e);
             error = true;
         } catch(SecurityException _ex) {
             ButtonDialog.showOKDialog(applet, null, "Error opening file dialog", "Error opening file dialog:\n(your browser won't allow it)");
@@ -123,19 +123,19 @@ public class State {
                 stateFile = null;
         } catch(FileNotFoundException _ex) {
             if(errorDialogs)
-                ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: file not found");
+                ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: file not found");
             else
-                System.err.println("Error loading state: file not found");
+                System.err.println("Error loading pippin.state: file not found");
         } catch(IOException e) {
             if(errorDialogs)
-                ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: couldn't read file");
-            System.err.println("Error loading state: exception " + e);
+                ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: couldn't read file");
+            System.err.println("Error loading pippin.state: exception " + e);
             error = true;
         } catch(SecurityException e) {
             if(errorDialogs)
-                ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: couldn't read file\n(your browser won't allow it)");
+                ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: couldn't read file\n(your browser won't allow it)");
             else
-                System.err.println("Error loading state: exception " + e);
+                System.err.println("Error loading pippin.state: exception " + e);
             error = true;
         }
         return stateObj;
@@ -146,7 +146,7 @@ public class State {
         try {
             BufferedInputStream bis = new BufferedInputStream(is);
             DataInputStream dis = new DataInputStream(bis);
-            if(dis.readUTF().equals("This is a legal state file"))
+            if(dis.readUTF().equals("This is a legal pippin.state file"))
                 stateObj = stateToObj(dis);
             else
                 error = true;
@@ -157,25 +157,25 @@ public class State {
             if(error) {
                 stateObj = null;
                 if(errorDialogs)
-                    ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: bad file format");
+                    ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: bad file format");
                 else
                     System.err.println("Internal error, State.loadFromURL: couldn't restore object");
             }
         } catch(FileNotFoundException _ex) {
             if(errorDialogs)
-                ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: file not found");
+                ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: file not found");
             else
-                System.err.println("Error loading state: file not found");
+                System.err.println("Error loading pippin.state: file not found");
         } catch(IOException e) {
             if(errorDialogs)
-                ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: couldn't read file");
-            System.err.println("Error loading state: exception " + e);
+                ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: couldn't read file");
+            System.err.println("Error loading pippin.state: exception " + e);
             error = true;
         } catch(SecurityException e) {
             if(errorDialogs)
-                ButtonDialog.showOKDialog(applet, null, "Error loading state", "Error loading state: couldn't read file\n(your browser won't allow it)");
+                ButtonDialog.showOKDialog(applet, null, "Error loading pippin.state", "Error loading pippin.state: couldn't read file\n(your browser won't allow it)");
             else
-                System.err.println("Error loading state: exception " + e);
+                System.err.println("Error loading pippin.state: exception " + e);
             error = true;
         }
         return stateObj;
@@ -239,7 +239,7 @@ public class State {
             FileOutputStream fos = new FileOutputStream(dataFile);
             BufferedOutputStream bos = new BufferedOutputStream(fos);
             DataOutputStream dos = new DataOutputStream(bos);
-            dos.writeUTF("This is a legal state file");
+            dos.writeUTF("This is a legal pippin.state file");
             objToState(stateObj, dos);
             dos.close();
             bos.close();
@@ -248,11 +248,11 @@ public class State {
             // if(grantedPrivilege("UniversalFileAccess"))
             //     PrivilegeManager.revertPrivilege("UniversalFileAccess");
         } catch(IOException e) {
-            ButtonDialog.showOKDialog(applet, null, "Error saving state", "Error writing state file:\ncouldn't write to file.");
-            System.err.println("Error loading state: exception " + e);
+            ButtonDialog.showOKDialog(applet, null, "Error saving pippin.state", "Error writing pippin.state file:\ncouldn't write to file.");
+            System.err.println("Error loading pippin.state: exception " + e);
             error = true;
         } catch(SecurityException _ex) {
-            ButtonDialog.showOKDialog(applet, null, "Error saving state", "Error writing state file:\n(your browser won't allow it).");
+            ButtonDialog.showOKDialog(applet, null, "Error saving pippin.state", "Error writing pippin.state file:\n(your browser won't allow it).");
             error = true;
         }
         return !error;

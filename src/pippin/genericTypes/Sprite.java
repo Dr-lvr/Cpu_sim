@@ -86,7 +86,7 @@ public abstract class Sprite extends Panel implements SpriteType{
 
     public final void markDirty() {
         if (stage == null) {
-            System.out.println("Sprite.markDirty: stage is null with sprite " + this);
+            System.out.println("Sprite.markDirty: pippin.stage is null with sprite " + this);
         } else {
             stage.dirtySprite(this);
         }

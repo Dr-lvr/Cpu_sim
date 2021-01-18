@@ -74,7 +74,7 @@ public class Stage extends FFCanvas implements Runnable {
 
     public synchronized void addSprite(Sprite theSprite, int theChannel) {
         if(theSprite.stage == null) {
-            System.out.println("Stage.addSprite with sprite.stage == null!");
+            System.out.println("Stage.addSprite with sprite.pippin.stage == null!");
         }
         if(sprites.size() <= theChannel) {
             sprites.setSize(theChannel + 1);

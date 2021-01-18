@@ -1,6 +1,6 @@
-		package pippin;
+package pippin;
 
-		import java.awt.*;
+import java.awt.*;
 		import java.awt.event.ActionEvent;
 		import java.awt.event.ActionListener;
 		import java.awt.event.MouseAdapter;
@@ -25,7 +25,7 @@
 					//JLabel label = new JLabel();
 					//label.setText("CPU_sim.V003");
 					//label.setBounds(0, 0, 100, 100);
-					Icon icon = new ImageIcon("../Sim_cpu/src/pippin/z__images2/mainMenuIcons/CPU_icona.png"); // ../Pippin_V003/src/pippin/z__images2/ir.png
+					Icon icon = new ImageIcon("../Sim_cpu/src/pippin/pippin.z__images2/mainMenuIcons/CPU_icona.png"); // ../Pippin_V003/src/pippin/pippin.z__images2/ir.png
 					JButton button = new JButton(icon);
 					button.setBackground(Color.orange);
 

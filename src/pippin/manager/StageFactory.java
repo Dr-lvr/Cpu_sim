@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Panel;
 import java.awt.Scrollbar;
-import java.awt.Toolkit;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,7 +53,7 @@ public class StageFactory extends Panel {
 
 		spritesStage.put(SpritesEnum.BOX_EDITOR, editBox);
 		spritesStage.put(SpritesEnum.ABUS, new SpriteRect(stage, 358, 30, 5, 259));
-		//spritesStage.put(SpritesEnum.RAM_CONTAINER, new SpriteRect(stage, 0, 3, ncs.getWidth() - 390, 292));
+		//spritesStage.put(SpritesEnum.RAM_CONTAINER, new SpriteRect(pippin.stage, 0, 3, ncs.getWidth() - 390, 292));
 		spritesStage.put(SpritesEnum.INSTRUCTION_REGISTER, new SpriteIR(stage, 35, 30, 140, 20));
 		spritesStage.put(SpritesEnum.MULTIPLEXER, new SpriteMUX(stage, 185, 100, 60, 20));
 		spritesStage.put(SpritesEnum.ARITHMETIC_LOGIC_UNIT, new SpriteALU(stage, 90, 170, 160, 50));
@@ -71,7 +70,7 @@ public class StageFactory extends Panel {
 		spritesStage.put(SpritesEnum.SYSTEM_SERVICES,
 				new SpriteBox(stage, "SYSTEM", 10, 293, 260, 110, 0));
 		//spritesStage.put(SpritesEnum.VIRTUAL_SSD,
-			//	new SpriteBox(stage, "SSD", (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 460, 490, 295, 150, 0));
+			//	new SpriteBox(pippin.stage, "SSD", (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 460, 490, 295, 150, 0));
 		spritesStage.put(SpritesEnum.VIRTUAL_RAM,
 				new SpriteBox(stage, "VRAM", 500, 410, 100, 250, 0));
 		return spritesStage;
@@ -80,7 +79,7 @@ public class StageFactory extends Panel {
 	public static void setSpritesOnStage(Stage stage) {
 		//automatizzabile
 		
-		//problema logico - il programma setta le etichette sullo stage dalle etichette stesse il che piega un po'
+		//problema logico - il programma setta le etichette sullo pippin.stage dalle etichette stesse il che piega un po'
 		//la logica costruttiva generale -> frame add/canvas add/panel
 		final int labelOffsetX = 45;
 		final int labelOffsetY = 25;
@@ -211,7 +210,7 @@ public class StageFactory extends Panel {
 			a+=16;
 		}
 		
-		//wire system
+		//wire pippin.system
 		makeNode(stage, "EDI", 276, 390);
 		makeNode(stage, "SYS", 393, 390);
 		makeNode(stage, "OTH", 393, 410);
@@ -227,7 +226,7 @@ public class StageFactory extends Panel {
 		
 		makeWire(stage, "EDI", "SYS", "dataOut", ncs);
 		makeWire(stage, "SYS", "OTH", "dataOut", ncs);
-		//makeWire(stage, "EDI", "SYS", "dataOut", ncs);
+		//makeWire(pippin.stage, "EDI", "SYS", "dataOut", ncs);
 		
 		makeWire(stage, "SYS2", "SYS3", "dataOut", ncs);
 		makeWire(stage, "SYS3", "VRAM", "dataOut", ncs);
@@ -236,12 +235,12 @@ public class StageFactory extends Panel {
 		makeWire(stage, "SYS4", "SYS5", "dataOut", ncs);
 		makeWire(stage, "SYS5", "VRAM2", "dataOut", ncs);
 		
-		//wire vram & system
+		//wire vram & pippin.system
 		/*
-		makeNode(stage, "VRAM3", 1130, 366);
-		makeNode(stage, "RAMSTACK1", 1130, 280);
+		makeNode(pippin.stage, "VRAM3", 1130, 366);
+		makeNode(pippin.stage, "RAMSTACK1", 1130, 280);
 		*/
-		//makeWire(stage, "VRAM3", "RAMSTACK1", "dataOut", ncs);
+		//makeWire(pippin.stage, "VRAM3", "RAMSTACK1", "dataOut", ncs);
 		/////////////////////////////////////////////////////
 		
 		int decoderNodesX = spritesStage.get(SpritesEnum.DECODER).getX()

@@ -142,7 +142,7 @@ public class AnimationManager extends SpriteProvider implements Runnable, Manage
 			if (isReset) {
 				steps = 0;
 				internalReset();
-				// write the system reset
+				// write the pippin.system reset
 				isReset = false;
 			} else if (!internalDone()) {
 				if (step) {
