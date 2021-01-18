@@ -41,7 +41,7 @@
 			Icon icon;
 			JButton button8;
 			for (String image : imageList) {
-				icon = new ImageIcon("../Sim_cpu/src/pippin/pippin.z__images2/mainMenuIcons/" + image + ".png"); // ../Pippin_V003/src/pippin/pippin.z__images2/ir.png
+				icon = new ImageIcon("../Sim_cpu/src/pippin/z__images2/mainMenuIcons/" + image + ".png"); // ../Pippin_V003/src/pippin/pippin.z__images2/ir.png
 				actualImage = image;
 				button8 = new JButton(icon);
 				//button8.setBounds(0, 10, 200, 10);
@@ -104,7 +104,7 @@
 			Icon icon;
 			JButton button8;
 					for (String image : imageList2) {
-						icon = new ImageIcon("../Sim_cpu/src/pippin/pippin.z__images2/cpuIcons/" + image + ".png"); // ../Pippin_V003/src/pippin/pippin.z__images2/ir.png
+						icon = new ImageIcon("../Sim_cpu/src/pippin/z__images2/cpuIcons/" + image + ".png"); // ../Pippin_V003/src/pippin/pippin.z__images2/ir.png
 						button8 = new JButton(icon);
 						//button8.setBounds(0, 10, 200, 10);
 						button8.setBackground(Color.lightGray);
