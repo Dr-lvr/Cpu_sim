@@ -1,10 +1,6 @@
 package pippin.system.panels;
 
-import java.awt.Color;
-import java.awt.Dialog;
-import java.awt.FlowLayout;
-import java.awt.Frame;
-import java.awt.Label;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -50,6 +46,8 @@ public class ServicePanel extends JPanel implements ActionListener {
 		JFrame ff= new JFrame();
 		ff.setResizable(true);
 		JPanel c = new JPanel();
+		JLabel text = new JLabel("Service panel for OS service");
+		c.add(text);
 		c.setLayout( new FlowLayout() );
 		c.setSize(300,300);
 		c.setVisible(true);

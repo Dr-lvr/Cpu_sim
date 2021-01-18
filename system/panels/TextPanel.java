@@ -8,8 +8,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Vector;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import pippin.system.data.Job;
 import pippin.system.mediators.Controller;
@@ -43,6 +42,8 @@ public class TextPanel extends JPanel implements ActionListener{
 		JFrame ff= new JFrame();
 		ff.setResizable(true);
 		JPanel c = new JPanel();
+		JLabel text = new JLabel("Text panel for edit code");
+		c.add(text);
 		c.setLayout( new FlowLayout() );
 		c.setSize(300,300);
 		c.setVisible(true);
