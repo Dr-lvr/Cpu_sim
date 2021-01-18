@@ -1,9 +1,6 @@
 package pippin.editorPanel;
 
-import java.awt.Color;
-import java.awt.Dialog;
-import java.awt.Frame;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -52,18 +49,19 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 
 			if(image == "CPU_icona") {
 				button8.addActionListener(this);
-				JButton finalButton = button8;
-				button8.addMouseListener(new MouseAdapter() {
-					@Override
-					public void mouseEntered(MouseEvent me) {
-						finalButton.setBackground(Color.red);
-					}
-					@Override
-					public void mouseExited(MouseEvent me) {
-						finalButton.setBackground(Color.lightGray);
-					}
-				});
 			}
+			JButton finalButton = button8;
+			button8.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseEntered(MouseEvent me) {
+					finalButton.setBackground(Color.orange);
+				}
+
+				@Override
+				public void mouseExited(MouseEvent me) {
+					finalButton.setBackground(Color.lightGray);
+				}
+			});
 			
 			this.add(button8);
 			panelButtons.add(button8);
