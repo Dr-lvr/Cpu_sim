@@ -19,6 +19,7 @@
 		public class Main {
 			public static void main(String[] args) {
 
+
 					JFrame frame = new JFrame("CPU_Sim_Menu");
 					JPanel panel = new JPanel();
 					panel.setLayout(new CardLayout(350,300));
