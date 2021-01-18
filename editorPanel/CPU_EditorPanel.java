@@ -42,7 +42,7 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 		Icon icon;
 		JButton button8;
 		for (String image : imageList) {
-			icon = new ImageIcon("../Pippin_V003/src/pippin/z__images2/" + image + ".png"); // ../Pippin_V003/src/pippin/z__images2/ir.png
+			icon = new ImageIcon("../Sim_cpu/src/pippin/z__images2/" + image + ".png"); // ../Pippin_V003/src/pippin/z__images2/ir.png
 			button8 = new JButton(icon);
 			//button8.setBounds(0, 10, 200, 10);
 			button8.setBackground(Color.lightGray);

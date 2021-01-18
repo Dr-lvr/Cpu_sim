@@ -49,8 +49,7 @@ public class Main {
 	        frame.setSize(200, 300);  
 	        frame.setLocationRelativeTo(null);  
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
-	        frame.setVisible(true);  
-		
+	        frame.setVisible(true);
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
