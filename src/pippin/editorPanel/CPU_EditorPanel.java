@@ -27,7 +27,7 @@
 
 		private String actualImage;
 
-		final String[] imageList = { "CPU_icona", "RAM_icona", "editor", "pippin/system", "queue", "setting"};
+		final String[] imageList = { "CPU_icona", "RAM_icona", "editor", "system", "queue", "setting"};
 		final String[] imageList2 = { "exit", "acc", "alu", "counter", "decoder", "instruction", "MUX", "status"};
 		//final String[] imageList3 = { "exit", "fifo", "fixed_priority","manual","multyLevel","priority","rr","shortest_remaining","workConservice"};
 		public CPU_EditorPanel() throws IOException {
