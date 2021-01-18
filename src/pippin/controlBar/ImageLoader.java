@@ -19,7 +19,7 @@ public class ImageLoader {
 		imagesByName = new Hashtable<>();
 		try {
 			for (String imageName : imageList) {
-				URL imageURL = getClass().getResource("pippin/z__images/" + imageName + ".GIF");
+				URL imageURL = getClass().getClassLoader().getResource("pippin/z__images/" + imageName + ".GIF");
 				Image image = ImageIO.read(imageURL);
 				if (image != null) {
 					imagesByName.put(imageName, image);
