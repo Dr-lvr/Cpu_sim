@@ -50,7 +50,7 @@ public class StageFactory extends Panel {
 	public static Map<SpritesEnum, SpriteType> mapSprites(Stage stage, Simulation ncs, Scrollbar scrollBar) {
 		
 		//automatizzabile
-		spritesStage.put(SpritesEnum.STATUS_WORD, new SpriteRect(stage, 218, 250, 100, 20));
+		spritesStage.put(SpritesEnum.STATUS_WORD, new SpriteRect(stage, 218, 250, 130, 20));
 
 		spritesStage.put(SpritesEnum.BOX_EDITOR, editBox);
 		spritesStage.put(SpritesEnum.ABUS, new SpriteRect(stage, 358, 30, 5, 259));
@@ -87,7 +87,7 @@ public class StageFactory extends Panel {
 		for (Map.Entry<SpritesEnum, SpriteType> entry : spritesStage.entrySet()) {
 			switch (entry.getKey()) {
 				case STATUS_WORD:
-					makeLabel(stage, "STATUS_WORD", 218, 250, 100, 20, 2);
+					makeLabel(stage, "STATUS_WORD", 238, 250, 100, 20, 2);
 					entry.getValue().addStage(2);
 					break;
 			case BOX_EDITOR:
