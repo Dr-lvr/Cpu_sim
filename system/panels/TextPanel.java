@@ -1,12 +1,11 @@
 package pippin.system.panels;
 
-import java.awt.Button;
-import java.awt.Dialog;
-import java.awt.FlowLayout;
-import java.awt.TextArea;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.Vector;
 
 import javax.swing.JFrame;
@@ -28,6 +27,7 @@ public class TextPanel extends JPanel implements ActionListener{
 	private TextArea area;
 	private Button b;
 	private Dialog d;
+	private Dialog c;
 	
 	Controller myController;
 	
@@ -39,6 +39,27 @@ public class TextPanel extends JPanel implements ActionListener{
 		b.addActionListener(this);
 		add(b);
 		add(area);
+
+		JFrame ff= new JFrame();
+		ff.setResizable(true);
+		JPanel c = new JPanel();
+		c.setLayout( new FlowLayout() );
+		c.setSize(300,300);
+		c.setVisible(true);
+		ff.add(c);
+		ff.setBounds(400, 230, 200, 200);
+
+		this.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent me) {
+				//c.setVisible(true);
+				ff.setVisible(true);
+			}
+			@Override
+			public void mouseExited(MouseEvent me) {
+				ff.setVisible(false);
+			}
+		});
 	}
 
 	public void actionPerformed(ActionEvent e) {
