@@ -1,5 +1,6 @@
 # Sim_cpu
 
+/*
 GUI
 0a. connect buttons and component for share state
 0b. do a lite version, better structured of the sketched GUI
@@ -19,3 +20,4 @@ GUI
   
 5. SCHEDULER
   5a. implements scheduling algorithms
+*/
