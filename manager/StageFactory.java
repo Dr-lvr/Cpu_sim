@@ -216,6 +216,11 @@ public class StageFactory extends Panel {
 		makeNode(stage, "SYS3", 548, 350);
 		makeNode(stage, "VRAM", 548, 500);
 		
+		makeNode(stage, "SYS0", 575, 450);
+		makeNode(stage, "SYS4", 575, 330);
+		makeNode(stage, "SYS5", 1100, 330);
+		makeNode(stage, "VRAM2",1100, 300);
+		
 		makeWire(stage, "EDI", "SYS", "dataOut", ncs);
 		makeWire(stage, "SYS", "OTH", "dataOut", ncs);
 		//makeWire(stage, "EDI", "SYS", "dataOut", ncs);
@@ -223,11 +228,15 @@ public class StageFactory extends Panel {
 		makeWire(stage, "SYS2", "SYS3", "dataOut", ncs);
 		makeWire(stage, "SYS3", "VRAM", "dataOut", ncs);
 		
-		//wire vram & system
+		makeWire(stage, "SYS0", "SYS4", "dataOut", ncs);
+		makeWire(stage, "SYS4", "SYS5", "dataOut", ncs);
+		makeWire(stage, "SYS5", "VRAM2", "dataOut", ncs);
 		
+		//wire vram & system
+		/*
 		makeNode(stage, "VRAM3", 1130, 366);
 		makeNode(stage, "RAMSTACK1", 1130, 280);
-		
+		*/
 		//makeWire(stage, "VRAM3", "RAMSTACK1", "dataOut", ncs);
 		/////////////////////////////////////////////////////
 		

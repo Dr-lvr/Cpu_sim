@@ -19,11 +19,11 @@ import javax.swing.JPanel;
 
 public class Main {
 	public static void main(String[] args) {
-		
-			JFrame frame = new JFrame("JFrame Example");  
+
+			JFrame frame = new JFrame("CPU_Sim_Menu");
 	        JPanel panel = new JPanel();  
 	        panel.setLayout(new FlowLayout());  
-	        JLabel label = new JLabel("JFrame By Example");  
+	        JLabel label = new JLabel("Menu");
 	        JButton button = new JButton();  
 	        button.setText("Button");
 	        button.addActionListener ( new ActionListener()

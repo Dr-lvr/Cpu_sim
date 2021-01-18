@@ -26,7 +26,6 @@ public class Job {
 		this.setCode(strings);
 	}
 	
-	
 	public Vector<String> getCode() {
 		return code;
 	}
