@@ -1,10 +1,10 @@
 # Sim_cpu
 
-0.GUI
-  0a. connect buttons and component for share state
-  0b. do a lite version, better structured of the sketched GUI
-  0c. improve graphic and user exp
-  0d. enable and disable tips
+GUI
+0a. connect buttons and component for share state
+0b. do a lite version, better structured of the sketched GUI
+0c. improve graphic and user exp
+0d. enable and disable tips
 
 2.LOW LEVEL
   2a. wiring system**
