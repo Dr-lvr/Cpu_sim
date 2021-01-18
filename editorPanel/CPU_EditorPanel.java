@@ -31,10 +31,8 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 	Dialog d;
 
 	final String[] imageList = { "CPU_icona", "RAM_icona", "editor", "system", "queue", "setting"};
-	final String[] imageList2 = { "acc", "alu", "counter", "decoder", "exit", "instruction", "MUX"};
+	final String[] imageList2 = { "exit", "acc", "alu", "counter", "decoder", "instruction", "MUX"};
 	public CPU_EditorPanel() throws IOException {
-
-
 /*
 		m = new EditorMenu();
 		this.add(m.menu);
