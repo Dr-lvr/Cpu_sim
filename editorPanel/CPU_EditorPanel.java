@@ -6,6 +6,8 @@ import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 //import java.awt.Button;
 import java.util.Vector;
@@ -31,7 +33,7 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 	Dialog d;
 
 	final String[] imageList = { "CPU_icona", "RAM_icona", "editor", "system", "queue", "setting"};
-	final String[] imageList2 = { "exit", "acc", "alu", "counter", "decoder", "instruction", "MUX"};
+	final String[] imageList2 = { "exit", "acc", "alu", "counter", "decoder", "instruction", "MUX", "status"};
 	public CPU_EditorPanel() throws IOException {
 /*
 		m = new EditorMenu();
@@ -50,6 +52,17 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 
 			if(image == "CPU_icona") {
 				button8.addActionListener(this);
+				JButton finalButton = button8;
+				button8.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseEntered(MouseEvent me) {
+						finalButton.setBackground(Color.red);
+					}
+					@Override
+					public void mouseExited(MouseEvent me) {
+						finalButton.setBackground(Color.lightGray);
+					}
+				});
 			}
 			
 			this.add(button8);
@@ -91,6 +104,17 @@ public class CPU_EditorPanel extends JPanel implements ActionListener {
 				button8.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						f.setVisible(false);
+					}
+				});
+				JButton finalButton = button8;
+				button8.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseEntered(MouseEvent me) {
+						finalButton.setBackground(Color.red);
+					}
+					@Override
+					public void mouseExited(MouseEvent me) {
+						finalButton.setBackground(Color.lightGray);
 					}
 				});
 			}
